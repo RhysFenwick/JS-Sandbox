@@ -1,3 +1,75 @@
+/* Colour variables */
+:root {
+    --primary-color: #360000;
+    --secondary-color: #420000;
+    --background-color: #f0f0f0;
+    --text-color: #000000;
+}
+
 body {
     font-family: "Iosevka Charon Mono", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headers! */
+
+#site-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hexagons! */
+
+.hexagon-row {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.hexagon-grid {
+    background-color: var(--primary-color);
+}
+
+.hexagon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.odd-row {
+    transform: translateX(38px);
+}
+
+.end-row {
+    height: 25px;
 }
