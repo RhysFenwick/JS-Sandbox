@@ -63,17 +63,11 @@ class NestedNote extends HTMLElement {
                     outline-offset: 2px;
                     border-radius: 2px;
                 }
-            </style>
-
-            <button
-                type="button"
-                aria-expanded="false"
-            ></button>
-
-            <div class="explanation" hidden>
-                <slot></slot>
-            </div>
-        `;
+            </style>` +
+            // No whitespace between or after these elements: it would render as a
+            // stray space after the trigger text when the explanation is hidden.
+            `<button type="button" aria-expanded="false"></button>` +
+            `<div class="explanation" hidden><slot></slot></div>`;
 
         this.button = shadow.querySelector("button");
         this.explanation = shadow.querySelector(".explanation");
